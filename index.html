@@ -25,7 +25,7 @@
 
 
   <title>Sonic4D Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="static/images/icon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -57,9 +57,9 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Siyi Xie</a><sup>1</sup>,</span>
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Siyi Xie</a><sup>*1</sup>,</span>
                 <span class="author-block">
-                  <a href="https://scholar.google.com/citations?user=MbVZAGQAAAAJ" target="_blank">Hanxin Zhu</a><sup>1</sup>,</span>
+                  <a href="https://scholar.google.com/citations?user=MbVZAGQAAAAJ" target="_blank">Hanxin Zhu</a><sup>*1</sup>,</span>
                   <span class="author-block">
                     <a href="https://scholar.google.com/citations?user=P08KU1YAAAAJ" target="_blank">Tianyu He</a>,</span>
                   </span>
@@ -73,7 +73,7 @@
 
                   <div class="is-size-5 publication-authors">
                     <span class="author-block">University of Science and Technology of China<br>Arxiv, 2025</span>
-                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -89,17 +89,6 @@
                       </a>
                     </span>
 
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
                   <!-- Github link -->
                   <span class="link-block">
                     <a href="https://github.com/X-Drunker/Sonic4D.github.io" target="_blank"
@@ -107,7 +96,7 @@
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code</span>
+                    <span>Code coming soon...</span>
                   </a>
                 </span>
 
@@ -134,11 +123,11 @@
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
+      <div class="column is-four-fifths", style="max-width: 1400px;">
+        <h2 class="title is-3">TL;DR</h2>
+        <div class="content has-text-justified", style="font-size: 1.3em;">
           <p>
-            Recent advancements in 4D generation have demonstrated its remarkable capability in synthesizing photorealistic renderings of dynamic 3D scenes. However, despite achieving impressive visual performance, almost all existing methods overlook the generation of spatial audio aligned with the corresponding 4D scenes, posing a significant limitation to truly immersive audiovisual experiences. To mitigate this issue, we propose Sonic4D, a novel framework that enables spatial audio generation for immersive exploration of 4D scenes. Specifically, our method is composed of three stages: 1) To capture both the dynamic visual content and raw auditory information from a monocular video, we first employ pre-trained expert models to generate the 4D scene and its corresponding monaural audio. 2) Subsequently, to transform the monaural audio into spatial audio, we localize and track the sound sources within the 4D scene, where their 3D spatial coordinates at different timestamps are estimated via a pixel-level visual grounding strategy. 3) Based on the estimated sound source locations, we further synthesize plausible spatial audio that varies across different viewpoints and timestamps using physics-based simulation. Extensive experiments have demonstrated that our proposed method generates realistic spatial audio consistent with the synthesized 4D scene in a training-free manner, significantly enhancing the immersive experience for users.
+            <b>Sonic4D</b> is a novel training-free framework that enables <b>spatial audio generation</b> for immersive exploration of <b>4D scenes</b>. It provides plausible spatial audio that varies across different <b>viewpoints</b> and <b>timestamps</b>.
           </p>
         </div>
       </div>
@@ -152,47 +141,12 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <div class="carousel-center-content">
-            <img src="static/images/pipeline.jpg" alt="MY ALT TEXT"/>
-            <h2 class="subtitle">
-              <b>Pipeline of Sonic4D.</b> We propose a <b>three-stage framework</b> to achieve spatial audio generation: <b>1) Dynamic Scene and Monaural Audio Generation</b> to extract semantically aligned visual and audio priors from a single video; <b>2) 3D Sound-Source Localization and Tracking</b> to recover the sound source's 3D trajectory for precise acoustic simulation; <b>3) Physics-Driven Spatial Audio Synthesis</b> to render dynamic, viewpoint‑adaptive binaural audio via physics-based room impulse response simulation.
-            </h2>
-          </div>
-        </div>
-        <div class="item">
-          <div class="carousel-center-content">
-            <img src="static/images/stage2.jpg" alt="MY ALT TEXT"/>
-            <h2 class="subtitle">
-              <b>Illustration of Stage Ⅱ:</b> We feed the video input frame-wisely into GroundingGPT[1] to obtain the sound source pixel coordinates. Then, we compute the average 3D coordinates of an r × r  patch centered around the estimated 2D location via back-projection, and treat this as the 3D position of the sound source. Finally, we apply the DBSCAN[2] algorithm to filter and interpolate the sound-source trajectory, yielding a smooth and reliable final trajectory[3].
-            </h2>
-          </div>
-        </div>
-        <div class="item">
-          <div class="carousel-center-content">
-            <img src="static/images/case1_2.png" alt="MY ALT TEXT" style="max-height:600px; width:auto;"/>
-            <h2 class="subtitle">
-              <b>Qualitative results across different scenarios.</b> We present comparisons of the spatial audio generated by Sonic4D conditioning on various camera trajectories, including static camera viewpoints, camera circling around the subject, rightward panning, and pulling out. These examples demonstrate the temporal and spatial alignment between the generated spatial audio and the motion of the visual subject.
-            </h2>
-          </div>
-        </div>
-        <div class="item">
-          <div class="carousel-center-content">
-            <img src="static/images/case3.png" alt="MY ALT TEXT"/>
-            <h2 class="subtitle">
-              <b>Qualitative results across different scenarios.</b> We present comparisons of the spatial audio generated by Sonic4D conditioning on various camera trajectories, including static camera viewpoints, camera circling around the subject, rightward panning, and pulling out. These examples demonstrate the temporal and spatial alignment between the generated spatial audio and the motion of the visual subject.
-            </h2>
-          </div>
-        </div>
-        <div class="item">
-          <div class="carousel-center-content">
-            <img src="static/images/userstudy.png" alt="MY ALT TEXT"/>
-            <h2 class="subtitle">
-              <b>Subjective evaluation results for Sonic4D vs. MMAudio[4].</b> We conducted a user preference study with 25 participants evaluating 33 video-audio pairs to assess our method against MMAudio. Participants chose more spatial audio and rated Spatial Localization Accuracy (MOS-SLA) and Audio-Visual Congruence (MOS-AVSC) on a 1–5 scale. Sonic4D achieved an 89.03% preference rate (87.59% for static, 90.10% for dynamic viewpoints), with MOS-SLA of 4.013 vs. 2.322 and MOS-AVSC of 3.977 vs. 2.418, proving realistic spatial audio aligned with 4D scenes.
-            </h2>
-          </div>
-        </div>
+      <h2 class="title is-3 has-text-centered">Pipeline</h2>
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <img src="static/images/pipeline.jpg" alt="MY ALT TEXT" style="max-width: 1000px; width: 100%; height: auto;"/>
+        <h2 class="subtitle" style="max-width: 1000px; text-align: left; margin-top: 1em;">
+          <b>Pipeline of Sonic4D.</b> We propose a <b>three-stage framework</b> to achieve spatial audio generation: <b>1) Dynamic Scene and Monaural Audio Generation</b> to extract semantically aligned visual and audio priors from a single video; <b>2) 3D Sound-Source Localization and Tracking</b> to recover the sound source's 3D trajectory for precise acoustic simulation; <b>3) Physics-Driven Spatial Audio Synthesis</b> to render dynamic, viewpoint‑adaptive binaural audio via physics-based room impulse response simulation.
+        </h2>
       </div>
     </div>
   </div>
@@ -203,7 +157,7 @@
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div style="color: #e53935; font-weight: bold; font-size: 1.15em; margin: 18px 0; text-align: center;">
-      🎧 Please wear headphones to enjoy the examples 🎧
+      🎧 Please wear headphones and turn up the volume to enjoy the examples. 🎧
     </div>
       <div class="module" aria-label="Module 1">
           <div class="module-title">Fixed View Rendering</div>
@@ -620,9 +574,25 @@
   </section>
 <!--End paper poster -->
 
+<!-- Paper abstract -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent advancements in 4D generation have demonstrated its remarkable capability in synthesizing photorealistic renderings of dynamic 3D scenes. However, despite achieving impressive visual performance, almost all existing methods overlook the generation of spatial audio aligned with the corresponding 4D scenes, posing a significant limitation to truly immersive audiovisual experiences. To mitigate this issue, we propose Sonic4D, a novel framework that enables spatial audio generation for immersive exploration of 4D scenes. Specifically, our method is composed of three stages: 1) To capture both the dynamic visual content and raw auditory information from a monocular video, we first employ pre-trained expert models to generate the 4D scene and its corresponding monaural audio. 2) Subsequently, to transform the monaural audio into spatial audio, we localize and track the sound sources within the 4D scene, where their 3D spatial coordinates at different timestamps are estimated via a pixel-level visual grounding strategy. 3) Based on the estimated sound source locations, we further synthesize plausible spatial audio that varies across different viewpoints and timestamps using physics-based simulation. Extensive experiments have demonstrated that our proposed method generates realistic spatial audio consistent with the synthesized 4D scene in a training-free manner, significantly enhancing the immersive experience for users.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
 
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
+  <section class="section is-light" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>BibTex Code Here</code></pre>
