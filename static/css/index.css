@@ -133,5 +133,34 @@ body {
   font-size: smaller;
 }
 
+.results-carousel .item {
+  /* 让每个item充满carousel高度，并用flex居中内容 */
+  display: flex;
+  align-items: center;   /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+  height: 100%; /* 保证高度继承自carousel */
+  min-height: 350px; /* 可根据实际需要调整 */
+}
 
+.carousel-center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* subtitle左对齐 */
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px; /* 可根据实际需要调整 */
+}
+
+.carousel-center-content img {
+  display: block;
+  margin-bottom: 1rem;
+  max-width: 100%;
+  height: auto;
+  align-self: center; /* 让图片在flex列中水平居中 */
+}
+
+.carousel-center-content .subtitle {
+  text-align: left !important;
+  width: 100%;
+}
 

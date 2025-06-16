@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <title>Sonic4D Project Page</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -36,6 +36,7 @@
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/video-style.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -52,21 +53,27 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Sonic4D: Spatial Audio Generation for Immersive 4D Scene Exploration</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Siyi Xie</a><sup>1</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="https://scholar.google.com/citations?user=MbVZAGQAAAAJ" target="_blank">Hanxin Zhu</a><sup>1</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="https://scholar.google.com/citations?user=P08KU1YAAAAJ" target="_blank">Tianyu He</a>,</span>
+                  </span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?user=sbiY97gAAAAJ" target="_blank">Xin Li</a><sup>1</sup>,</span>
+                  </span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?user=1ayDJfsAAAAJ" target="_blank">Zhibo Chen</a><sup>1</sup>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">University of Science and Technology of China<br>Arxiv, 2025</span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
 
                   <div class="column has-text-centered">
@@ -95,7 +102,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/X-Drunker/Sonic4D.github.io" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -123,23 +130,6 @@
 </section>
 
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -148,7 +138,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Recent advancements in 4D generation have demonstrated its remarkable capability in synthesizing photorealistic renderings of dynamic 3D scenes. However, despite achieving impressive visual performance, almost all existing methods overlook the generation of spatial audio aligned with the corresponding 4D scenes, posing a significant limitation to truly immersive audiovisual experiences. To mitigate this issue, we propose Sonic4D, a novel framework that enables spatial audio generation for immersive exploration of 4D scenes. Specifically, our method is composed of three stages: 1) To capture both the dynamic visual content and raw auditory information from a monocular video, we first employ pre-trained expert models to generate the 4D scene and its corresponding monaural audio. 2) Subsequently, to transform the monaural audio into spatial audio, we localize and track the sound sources within the 4D scene, where their 3D spatial coordinates at different timestamps are estimated via a pixel-level visual grounding strategy. 3) Based on the estimated sound source locations, we further synthesize plausible spatial audio that varies across different viewpoints and timestamps using physics-based simulation. Extensive experiments have demonstrated that our proposed method generates realistic spatial audio consistent with the synthesized 4D scene in a training-free manner, significantly enhancing the immersive experience for users.
           </p>
         </div>
       </div>
@@ -163,111 +153,468 @@
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div class="item">
+          <div class="carousel-center-content">
+            <img src="static/images/pipeline.jpg" alt="MY ALT TEXT"/>
+            <h2 class="subtitle">
+              <b>Pipeline of Sonic4D.</b> We propose a <b>three-stage framework</b> to achieve spatial audio generation: <b>1) Dynamic Scene and Monaural Audio Generation</b> to extract semantically aligned visual and audio priors from a single video; <b>2) 3D Sound-Source Localization and Tracking</b> to recover the sound source's 3D trajectory for precise acoustic simulation; <b>3) Physics-Driven Spatial Audio Synthesis</b> to render dynamic, viewpoint‑adaptive binaural audio via physics-based room impulse response simulation.
+            </h2>
+          </div>
+        </div>
+        <div class="item">
+          <div class="carousel-center-content">
+            <img src="static/images/stage2.jpg" alt="MY ALT TEXT"/>
+            <h2 class="subtitle">
+              <b>Illustration of Stage Ⅱ:</b> We feed the video input frame-wisely into GroundingGPT[1] to obtain the sound source pixel coordinates. Then, we compute the average 3D coordinates of an r × r  patch centered around the estimated 2D location via back-projection, and treat this as the 3D position of the sound source. Finally, we apply the DBSCAN[2] algorithm to filter and interpolate the sound-source trajectory, yielding a smooth and reliable final trajectory[3].
+            </h2>
+          </div>
+        </div>
+        <div class="item">
+          <div class="carousel-center-content">
+            <img src="static/images/case1_2.png" alt="MY ALT TEXT" style="max-height:600px; width:auto;"/>
+            <h2 class="subtitle">
+              <b>Qualitative results across different scenarios.</b> We present comparisons of the spatial audio generated by Sonic4D conditioning on various camera trajectories, including static camera viewpoints, camera circling around the subject, rightward panning, and pulling out. These examples demonstrate the temporal and spatial alignment between the generated spatial audio and the motion of the visual subject.
+            </h2>
+          </div>
+        </div>
+        <div class="item">
+          <div class="carousel-center-content">
+            <img src="static/images/case3.png" alt="MY ALT TEXT"/>
+            <h2 class="subtitle">
+              <b>Qualitative results across different scenarios.</b> We present comparisons of the spatial audio generated by Sonic4D conditioning on various camera trajectories, including static camera viewpoints, camera circling around the subject, rightward panning, and pulling out. These examples demonstrate the temporal and spatial alignment between the generated spatial audio and the motion of the visual subject.
+            </h2>
+          </div>
+        </div>
+        <div class="item">
+          <div class="carousel-center-content">
+            <img src="static/images/userstudy.png" alt="MY ALT TEXT"/>
+            <h2 class="subtitle">
+              <b>Subjective evaluation results for Sonic4D vs. MMAudio[4].</b> We conducted a user preference study with 25 participants evaluating 33 video-audio pairs to assess our method against MMAudio. Participants chose more spatial audio and rated Spatial Localization Accuracy (MOS-SLA) and Audio-Visual Congruence (MOS-AVSC) on a 1–5 scale. Sonic4D achieved an 89.03% preference rate (87.59% for static, 90.10% for dynamic viewpoints), with MOS-SLA of 4.013 vs. 2.322 and MOS-AVSC of 3.977 vs. 2.418, proving realistic spatial audio aligned with 4D scenes.
+            </h2>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
+<!-- End image carousel -->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
+<!-- Examples -->
 <section class="hero is-small is-light">
   <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
+    <div style="color: #e53935; font-weight: bold; font-size: 1.15em; margin: 18px 0; text-align: center;">
+      🎧 Please wear headphones to enjoy the examples 🎧
+    </div>
+      <div class="module" aria-label="Module 1">
+          <div class="module-title">Fixed View Rendering</div>
+          <div class="module-desc"><b>Sonic4D</b> enables users to observe dynamic 4D scenes from static camera viewpoints and synthesizes binaural audio that spatially aligns with the (<b>non-centering</b>) subject's position</div>
+          <!-- Add a label row here only -->
+          <div class="video-label-row">
+              <div class="video-label-col">Source Video + MMAudio</div>
+              <div style="width:48px;"></div>
+              <div class="video-label-col">Sonic4D</div>
+          </div>
+          <div class="video-grid">
+              <!-- First video pair -->
+              <div class="video-pair">
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption1">
+                              <source src="assets/videos/static/crow_raw_ori.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption1">A blue crow in the forest.</div>
+                      </div>
+                  </div>
+                  <div style="width:48px;"></div>
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption2">
+                              <source src="assets/videos/static/crow_output_new.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption2">[Fix the camera on the right while rotating it slightly | x+1.5 & φ+5°]</div>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Second video pair -->
+              <div class="video-pair">
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption5">
+                              <source src="assets/videos/static/ukulele_raw_ori.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption3">A man playing ukulele in the street.</div>
+                      </div>
+                  </div>
+                  <div style="width:48px;"></div>
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption6">
+                              <source src="assets/videos/static/ukulele_output_new.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption4">[Fix the camera on the left | x-1.0]</div>
+                      </div>
+                  </div>
+              </div>
 
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+              <!-- Third video pair -->
+              <div class="video-pair">
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption3">
+                              <source src="assets/videos/static/muyu_raw_ori.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption5">A monk is beating a wooden fish.</div>
+                      </div>
+                  </div>
+                  <div style="width:48px;"></div>
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption4">
+                              <source src="assets/videos/static/muyu_output_new.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption6">[Fixed camera (no movement)]</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="module" aria-label="Module 2">
+          <div class="module-title">Dynamic Sound Source Tracking</div>
+          <div class="module-desc"><b>Sonic4D</b> tracks the 3D location and trajectory of the sound source, enabling the synthesis of spatial audio that consistently follows the movement of the scene's subject.</div>
+          <!-- Add a label row here only -->
+          <div class="video-label-row">
+              <div class="video-label-col">Source Video + MMAudio</div>
+              <div style="width:48px;"></div>
+              <div class="video-label-col">Sonic4D</div>
+          </div>
+          <div class="video-grid">
+              <!-- First video pair -->
+              <div class="video-pair">
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption1">
+                              <source src="assets/videos/dynamic_source(raw)/helicopter_raw_ori.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption1">A helicopter hovering in the air.</div>
+                      </div>
+                  </div>
+                  <div style="width:48px;"></div>
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption2">
+                              <source src="assets/videos/dynamic_source(raw)/helicopter_output_new.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption2">[Fixed camera (no movement)]</div>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Second video pair -->
+              <div class="video-pair">
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption5">
+                              <source src="assets/videos/dynamic_source(raw)/f1_raw_ori.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption5">F1 car speeding on the track.</div>
+                      </div>
+                  </div>
+                  <div style="width:48px;"></div>
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption6">
+                              <source src="assets/videos/dynamic_source(raw)/f1_output_new.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption6">[Fixed camera (no movement)]</div>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Third video pair -->
+              <div class="video-pair">
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption3">
+                              <source src="assets/videos/dynamic_source(raw)/tractor1_raw_ori.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption3">The tractor moves from left to right.</div>
+                      </div>
+                  </div>
+                  <div style="width:48px;"></div>
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption4">
+                              <source src="assets/videos/dynamic_source(raw)/tractor1_output_new.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption4">[Fixed camera (no movement)]</div>
+                      </div>
+                  </div>
+              </div>
+              <!-- Fourth video pair -->
+              <div class="video-pair">
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption3">
+                              <source src="assets/videos/dynamic_source(raw)/train_raw_ori.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption3">Train whistles as it enters the station.</div>
+                      </div>
+                  </div>
+                  <div style="width:48px;"></div>
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption4">
+                              <source src="assets/videos/dynamic_source(raw)/train_output_new.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption4">[Fixed camera (no movement)]</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="module" aria-label="Module 3">
+          <div class="module-title">Dynamic Camera Trajectories</div>
+          <div class="module-desc"><b>Sonic4D</b> supports diverse and customizable camera trajectories while maintaining spatial audio consistency with changing viewpoints, delivering an immersive audiovisual experience.</div>
+          <!-- Add a label row here only -->
+          <div class="video-label-row">
+              <div class="video-label-col">Source Video + MMAudio</div>
+              <div style="width:48px;"></div>
+              <div class="video-label-col">Sonic4D</div>
+          </div>
+          <div class="video-grid">
+              <!-- First video pair -->
+              <div class="video-pair">
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption1">
+                              <source src="assets/videos/surround/drums_1_raw_ori.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption1">Drummer playing African drums.</div>
+                      </div>
+                  </div>
+                  <div style="width:48px;"></div>
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption2">
+                              <source src="assets/videos/surround/drums_1_output_new.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption2">[Orbit the camera around the subject | φ-20° → φ+0° → φ+20°]</div>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Second video pair -->
+              <div class="video-pair">
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption5">
+                              <source src="assets/videos/translation/car-running_raw_ori.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption3">A car speeds away.</div>
+                      </div>
+                  </div>
+                  <div style="width:48px;"></div>
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption6">
+                              <source src="assets/videos/translation/car-running_output_new.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption4">[Pan the camera to the right | x+0 → x+2.0]</div>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Third video pair -->
+              <div class="video-pair">
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption5">
+                              <source src="assets/videos/surround/piano3_raw_ori.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption3">A man is playing the piano.</div>
+                      </div>
+                  </div>
+                  <div style="width:48px;"></div>
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption6">
+                              <source src="assets/videos/surround/piano3_output_new.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption4">[Sweeping from the top-left to bottom-center and up to the top-right | φ-30°, θ+20° → φ+0°, θ+0° → φ+30°, θ+20°]</div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="video-pair">
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption5">
+                              <source src="assets/videos/translation/flute1_raw_ori.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption3">A woman playing the flute.</div>
+                      </div>
+                  </div>
+                  <div style="width:48px;"></div>
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption6">
+                              <source src="assets/videos/translation/flute1_output_new.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption4">[Pan the camera to the right | x+0 → x+2.5]</div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="video-pair">
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption5">
+                              <source src="assets/videos/surround/train_raw_ori.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption3">The train is moving forward.</div>
+                      </div>
+                  </div>
+                  <div style="width:48px;"></div>
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption6">
+                              <source src="assets/videos/surround/train_output_new.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption4">[Orbit the camera around the subject | φ-20° → φ+0° → φ+20°]</div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="video-pair">
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption5">
+                              <source src="assets/videos/translation/fountain_raw_ori.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption3">Fountain water splashing .</div>
+                      </div>
+                  </div>
+                  <div style="width:48px;"></div>
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption6">
+                              <source src="assets/videos/translation/fountain_output_new.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption4">[Pan the camera to the right | x+0 → x+2.0]</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="module" aria-label="Module 4">
+          <div class="module-title">Push in / Pull out</div>
+          <div class="module-desc"><b>Sonic4D</b> enables camera push-in and pull-out effects relative to the subject, creating natural variations in audio amplitude (i.e., perceived loudness) as the distance changes.</div>
+          <!-- Add a label row here only -->
+          <div class="video-label-row">
+              <div class="video-label-col">Source Video + MMAudio</div>
+              <div style="width:48px;"></div>
+              <div class="video-label-col">Sonic4D</div>
+          </div>
+          <div class="video-grid">
+              <!-- First video pair -->
+              <div class="video-pair">
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption1">
+                              <source src="assets/videos/zoom/baby_raw_ori.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption1">A baby is crying.</div>
+                      </div>
+                  </div>
+                  <div style="width:48px;"></div>
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption2">
+                              <source src="assets/videos/zoom/baby_output.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption2">[Pull out the camera | r+0 → r-0.8]</div>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Second video pair -->
+              <div class="video-pair">
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption5">
+                              <source src="assets/videos/zoom/volcano1_raw_ori.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption5">The volcano is erupting.</div>
+                      </div>
+                  </div>
+                  <div style="width:48px;"></div>
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption6">
+                              <source src="assets/videos/zoom/volcano1_output_new.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption6">[Push in the camera | r+0 → r+0.8]</div>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Third video pair -->
+              <div class="video-pair">
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption3">
+                              <source src="assets/videos/zoom/piano2_raw_ori.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption3">Pianist playing the piano close-up.</div>
+                      </div>
+                  </div>
+                  <div style="width:48px;"></div>
+                  <div class="video-col">
+                      <div class="video-item">
+                          <video controls aria-describedby="caption4">
+                              <source src="assets/videos/zoom/piano2_output_new.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <div class="video-caption" id="caption4">[Pull out the camera | r+0 → r-0.8]</div>
+                      </div>
+                  </div>
+              </div>
+            </div>
       </div>
     </div>
   </section>
@@ -283,6 +630,33 @@
 </section>
 <!--End BibTex citation -->
 
+<section class="section" id="references">
+  <div class="container is-max-desktop content">
+    <h2 class="title">References</h2>
+    <ol>
+      <li>
+        <a href="https://arxiv.org/abs/2401.06071" target="_blank">
+          GroundingGPT:Language Enhanced Multi-modal Grounding Model
+        </a>
+      </li>
+      <li>
+        <a href="https://dl.acm.org/doi/10.5555/3001460.3001507" target="_blank">
+          A density-based algorithm for discovering clusters in large spatial databases with noise
+        </a>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2503.05638" target="_blank">
+          TrajectoryCrafter: Redirecting Camera Trajectory for Monocular Videos via Diffusion Models
+        </a>
+      </li>
+      <li>
+        <a href="https://arxiv.org/abs/2412.15322" target="_blank">
+          MMAudio: Taming Multimodal Joint Training for High-Quality Video-to-Audio Synthesis
+        </a>
+      </li>
+    </ol>
+  </div>
+</section>
 
   <footer class="footer">
   <div class="container">
