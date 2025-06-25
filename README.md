@@ -14,7 +14,7 @@
 
 ## Video Demos
 
-** 🎧 Please wear headphones and turn up the volume to enjoy the examples. 🎧 **
+**🎧 Please wear headphones and turn up the volume to enjoy the examples. 🎧**
 
 A helicopter hovering in the air.
 
