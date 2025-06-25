@@ -2,7 +2,7 @@
 
 **Authors:** Siyi Xie, Hanxin Zhu, Tianyu He, Xin Li, Zhibo Chen  
 [![arXiv](https://img.shields.io/badge/arXiv-2506.15759-b31b1b.svg)](https://arxiv.org/abs/2506.15759)
-[![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://X-Drunker.github.io/Sonic4D.github.io/)
+[![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://X-Drunker.github.io/Sonic4D-project-page/)
 
 ## TL;DR
 
@@ -25,7 +25,7 @@ The volcano is erupting.
 
 https://github.com/user-attachments/assets/5219be41-952c-4780-a898-893a9432ce35
 
-More examples can be found at [project page](https://X-Drunker.github.io/Sonic4D.github.io)
+More examples can be found at [project page](https://X-Drunker.github.io/Sonic4D-project-page)
 ## Related Projects
 
 - [GroundingGPT](https://github.com/lzw-lzw/GroundingGPT)
