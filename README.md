@@ -13,6 +13,10 @@
 <img src="static/images/pipeline.jpg" alt="Pipeline of Sonic4D" style="max-width: 1000px; width: 100%; height: auto;"/>
 
 ## Video Demos
+<span style="color: #e53935; font-weight: bold;">
+🎧 Please wear headphones and turn up the volume to enjoy the examples. 🎧
+</span>
+
 A helicopter hovering in the air.
 
 https://github.com/user-attachments/assets/f5824827-9bee-4161-9b71-4de5a2d809b1
