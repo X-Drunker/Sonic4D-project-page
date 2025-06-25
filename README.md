@@ -13,8 +13,17 @@
 <img src="static/images/pipeline.jpg" alt="Pipeline of Sonic4D" style="max-width: 1000px; width: 100%; height: auto;"/>
 
 ## Video Demos
+A helicopter hovering in the air.
 
-https://github.com/X-Drunker/Sonic4D-project-page/blob/master/assets/videos/dynamic_source(raw)/helicopter_output_new.mp4
+https://github.com/user-attachments/assets/f5824827-9bee-4161-9b71-4de5a2d809b1
+
+Drummer playing African drums.
+
+https://github.com/user-attachments/assets/6aa73d4d-2ad9-48c7-9247-872561550cef
+
+The volcano is erupting.
+
+https://github.com/user-attachments/assets/5219be41-952c-4780-a898-893a9432ce35
 
 ## Related Projects
 
