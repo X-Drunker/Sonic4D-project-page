@@ -25,7 +25,7 @@ The volcano is erupting.
 
 https://github.com/user-attachments/assets/5219be41-952c-4780-a898-893a9432ce35
 
-More examples can be found at ![project page](https://X-Drunker.github.io/Sonic4D.github.io)
+More examples can be found at [project page](https://X-Drunker.github.io/Sonic4D.github.io)
 ## Related Projects
 
 - [GroundingGPT](https://github.com/lzw-lzw/GroundingGPT)
