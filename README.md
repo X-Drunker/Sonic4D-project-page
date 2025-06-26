@@ -30,14 +30,20 @@ https://github.com/user-attachments/assets/5219be41-952c-4780-a898-893a9432ce35
 
 More examples can be found at [project page](https://X-Drunker.github.io/Sonic4D-project-page)
 ## Related Projects
-
+Many thanks to:
 - [GroundingGPT](https://github.com/lzw-lzw/GroundingGPT)
 - [TrajectoryCrafter](https://github.com/TrajectoryCrafter/TrajectoryCrafter)
 - [MMAudio](https://github.com/hkchengrex/MMAudio)
 
 ## BibTeX
-BibTex Code Here
-
+```
+@article{xie2025sonic4d,
+  title={Sonic4D: Spatial Audio Generation for Immersive 4D Scene Exploration},
+  author={Xie, Siyi and Zhu, Hanxin and He, Tianyu and Li, Xin and Chen, Zhibo},
+  journal={arXiv preprint arXiv:2506.15759},
+  year={2025}
+}
+```
 ## Acknowledgments
 Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
 
